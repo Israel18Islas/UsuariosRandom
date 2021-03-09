@@ -43,7 +43,7 @@
         <a class="options" href="profile.html">PROFILE</a>
         <label class="options" href="">LOGGIN</label>
         <label class="options" href="">CONTACT US</label>
-        <label class="options" href="php/cerrar_sesion.php">LOG OUT</label>
+        <a class="options" href="php/cerrar_sesion.php">LOG OUT</a>
     </nav>
     <br>
      <!--RIGHT PANEL-->
