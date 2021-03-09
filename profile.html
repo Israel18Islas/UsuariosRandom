@@ -12,8 +12,8 @@
 </head>
 <body>
     <nav class="menu">
-        <label class="options" href="">HOME</label>
-        <label class="options" href="profile.html">Profile</label>
+        <a class="options" href="bienvenida.php">HOME</a>
+        <a class="options" href="profile.html">Profile</a>
         <label class="options" href="">LOGGIN</label>
         <label class="options" href="">CONTACT US</label>
         <label class="options" href="php/cerrar_sesion.php">LOG OUT</label>
@@ -62,7 +62,7 @@
         }
         function updateProfile(data){
             console.log(data);
-                var fullname = data.name.first + " " + data.name.last;
+                var fullname = data.name.first + " " + data.name.last + " Age: " + data.dob.age;
                 fullnameDisp.innerText = fullname;
                 avatar.src = data.picture.large;
                 username.innerText = data.login.username;

@@ -42,6 +42,14 @@
     font-size: 1.05em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+#age {
+    margin: auto;
+    display: inline-block;
+    margin-left: 1.43em;
+    color: #fff;
+    font-size: 1.05em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .social{
     list-style: none;
     text-align: center;
