@@ -1,0 +1,814 @@
+* { 
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background:#cecdcd;
+    margin: 0px;
+}
+
+/* media queries */
+
+ /* desktop */
+@media only screen and (max-width:1280px) {
+
+}
+/* notebook */
+@media only screen and (max-width:1024px) {
+
+}
+/* tablet */
+@media only screen and (max-width:800px) {
+
+}
+/* large smartphone */
+@media only screen and (max-width:640px) {
+
+}
+/*smartphone */
+@media only screen and (max-width:480px) {
+
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+    overflow: hidden;
+    background-color: #46a2fd;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  .headerbtn{
+    
+        text-decoration: none;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #ffffff;
+        background-color: #007bff;
+        border-radius: 6px;
+        border: 2px solid #007bff;
+      }
+  
+  /* Style the header links */
+  .header a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header 
+  to increase when the font gets bigger */
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  /* Change the background color on mouse-over */
+  .header a:hover {
+    background-color: rgba(221, 221, 221, 0);
+    color: #ffffff;
+  }
+  
+  /* Style the active/current link*/
+  .header a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  /* Float the link section to the right */
+  .header-right {
+    float: right;
+  }
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+
+/*-------------------------------------------------------------------------
+-----------------------*//*First Temperature Panel*//*---------------------
+-------------------------------------------------------------------------*/
+
+.kpi{
+    position:relative;
+    float: center;
+    width: 100%;
+    margin-top:  20pt;
+    height: 160px;
+    background: #777;
+    display: flex;
+    flex-wrap: wrap;
+    border-top-right-radius:  1em;
+    border-top-left-radius:  1em;
+    box-shadow: 0 12px 16px 0 #46a2fd, 0 17px 50px 0 #46a2fd;
+}
+.title{
+    width: 100%;
+    height: 40px;
+    font-size: 16pt;
+    color: #FFF;
+    vertical-align: middle;
+    line-height: 40px;
+    text-align: center;
+    padding: 20pt;
+    border-top-right-radius:  1em;
+    border-top-left-radius:  1em;
+}
+.kpisizetemp/*kpiicon*/, .kpichart/*kpivalue*/ {
+    height: 120px;
+}
+.kpi2{
+    position:relative;
+    float: center;
+    width: 50%;
+    margin-top:  50pt;
+    height: 160px;
+    background: #777;
+    display: flex;
+    flex-wrap: wrap;
+    border-top-right-radius:  1em;
+    border-top-left-radius:  1em;
+    box-shadow: 0 12px 16px 0 #46a2fd, 0 17px 50px 0 #46a2fd;
+}
+.kpisizetemp2, .kpichart2{
+    width: 100%;
+    height: 100pt;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    box-shadow: 0 12px 16px 0 #46a2fd, 0 17px 50px 0#46a2fd;
+}
+.kpivaluesmall2{
+    color: #FFF;
+    font-size: 25pt;
+    margin-left: 25pt;
+    margin-top: 5pt;
+}
+
+/*.kpiicon*/
+.kpisizetemp{
+    width: 35%;
+    height: 120px;
+    text-align: left;
+    vertical-align: middle;
+    color: #FFF;
+    border-bottom-left-radius:  1em;
+}
+/*.kpivalue*/
+.kpichart{
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 120px;
+    vertical-align: middle;
+    border-bottom-right-radius:  1em;
+    border-bottom-left-radius:  1em;
+}
+.kpivaluebig{
+    font-size: 30pt;
+}
+.kpivaluesmall{
+    font-size: 20pt;
+    margin-right: 30pt;
+}
+.titleoutside{
+    background: #4da0ff;
+}
+/*.kpiiconoutside*/
+.kpicolortemppanel{
+    background: #ffffff;
+}
+/*.kpivalueoutside*/
+.kpicolorchartpanel{
+    background: #979797;
+}
+.small-icon {
+    font-size: 10px;
+}
+.normal-icon{
+    font-size: 20px;
+}
+.big-icon{
+    font-size: 30px;
+}
+.transparent-icon {
+    color: #FFF;
+}
+
+.title, .kpisizetemp/*kpiicon*/, .kpichart /*kpivalue*/{
+    position:           relative;
+    float:              left;
+    display:            flex;
+    align-items:        center;
+    justify-content:    center;
+    
+}
+
+/*-------------------------------------------------------------------------
+----------------------------*//*Central Panel*//*--------------------------
+-------------------------------------------------------------------------*/
+.titlecentral{
+    width: 100%;
+    height: 40px;
+    font-size: 16pt;
+    color: #FFF;
+    vertical-align: middle;
+    line-height: 40px;
+    text-align: center;
+    padding: 20pt;
+    border-top-right-radius:  1em;
+    border-top-left-radius:  1em;
+    position:           relative;
+    float:              left;
+    display:            flex;
+    align-items:        center;
+    justify-content:    center;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.titlecentral{
+    background:#4da0ff;
+}
+
+/*-------------------------------------------------------------------------
+---------------------------*//*Door Panels*//*-----------------------------
+-------------------------------------------------------------------------*/
+
+.rpanel1{
+    position:       relative;
+    float:          right;
+    height:         220px;
+    background:     #777;
+    display:        flex;
+    flex-wrap:      wrap;
+    margin-bottom:  55pt;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    width:          100%;
+}
+.colorptitle1{
+    background: #3f9ffa;
+    padding: 10pt;
+}
+.ptitle1{
+    width:          100%;
+    height:         60px;
+    top:            11pt;
+    font-size:      16pt;
+    color:          #FFF;
+    line-height:    40px;
+    text-align:     center;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+
+ 
+}
+.pvalue1{
+    position:       relative;
+    width:          100%;
+    color:          rgb(107, 107, 107);
+    display:        flex;
+    flex-direction: column;
+    text-align:     left;
+    height:         100%;
+    padding:        3%;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    margin-bottom: 20pt
+
+}
+.tbvalue1{
+    font-size: 20pt;
+}
+.tsvalue1{
+    font-size: 15pt;
+}
+.colorptitle1{
+    background: #3894fd;   
+}
+.colorvalue1{
+    background: #ffeeee;
+    border-color: #949191;
+}
+.smolldooricon1{
+    font-size: 16px;
+}
+.normaldooricon1{
+    font-size: 22px;
+}
+.bigdooricon1{
+    font-size: 30px;
+}
+.iconp1{
+    color: #FFF;
+}
+
+
+/*-------------------------------------------------------------------------
+----------------------------*//*Recordings*//*-----------------------------
+-------------------------------------------------------------------------*/
+.video{
+    width: 100%;
+    height: 50%;
+   
+    padding-top: 10pt;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+.previews{
+    position: relative;
+    vertical-align: middle;
+    margin-left: 2.4%;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 1em;
+}
+
+
+.video1{
+    width: 30%;
+    height: 50%;
+    cursor: pointer;
+    padding-top: 0pt;
+}
+.video2{
+    width: 30%;
+    height: 50%;
+    padding-top: 0pt;
+    cursor: pointer;
+}
+
+
+
+/*-------------------------------------------------------------------------
+-----------------------------*//*Buttons*//*-------------------------------
+-------------------------------------------------------------------------*/
+
+.doordownload{
+        position:relative;
+        align-items: center;
+        vertical-align: middle;
+        margin-top:  20pt;
+        height: 100px;
+        background: #777;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 0.5em;
+        width: 100%;
+    
+}
+.tempdownloader{
+        position:relative;
+        vertical-align: middle;
+        align-items: center;
+        float: center;
+        margin-top:  20pt;
+        height: 100px;
+        background: #777;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 0.5em;
+        width: 100%;
+    
+}
+.button {
+        position:relative;
+        background-color: rgb(168, 167, 167);
+        border-color: rgb(255, 255, 255);
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 25px;
+        margin: auto;
+        cursor: pointer;
+        border-radius: 0.2em;
+        height: 100px;
+        width: 100%;
+
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.button1{
+
+        position:relative;
+        background-color: rgb(168, 167, 167);
+        border-color: rgb(255, 255, 255);
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        vertical-align: middle;
+        font-size: 25px;
+        margin: auto;
+        cursor: pointer;
+        border-radius: 0.2em;
+        height: 100px;
+        width: 250pt;
+        margin: 50pt;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.chartbuttons{
+        position: relative;
+        text-align: center;
+        border-radius: 2em;
+        font-size: 15px;
+        background: #FFF;
+        width: 50px;
+        height: 25px;
+        cursor: pointer;
+        margin-right: 10pt;
+        margin-top: 2pt;
+}
+
+
+
+/*-------------------------------------------------------------------------
+-----------------------------*//*SVG Maping*//*----------------------------
+-------------------------------------------------------------------------*/
+.map{
+    width: 900px;
+    height: 550px;
+    border-radius: 1%;
+    border:2px solid #fff;
+    display: block;
+    margin: 1%;
+    position: relative;
+    bottom: 310pt;
+    right: -58%;
+    background: #FFF;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.inbutton1{
+    position: relative;
+    right:      -530pt;
+    top:        -410pt;
+}
+.inbutton2{
+    position: relative;
+    right:      -940pt;
+    top:        -620pt;
+}
+.inbutton3{
+    position: relative;
+    right:      -450pt;
+    top:        -985pt;
+}
+.inbutton4{
+    position: relative;
+    right:      -420pt;
+    top:        -980pt;
+}
+
+/*-------------------------------------------------------------------------
+-----------------------------*//*Charts*//*-------------------------------
+-------------------------------------------------------------------------*/
+
+.highcharts-figure, .highcharts-data-table table {
+    width:  100%;
+    height: 200pt;
+    margin-bottom: 2pt;
+}
+.highcharts-figure{
+    width: 100%;
+}
+#container1{
+    position: relative;
+    height: 100px;
+    width: 4000pt;
+}
+#container{
+    position: relative;
+    height: 119px;
+    width: 100%;
+    top: -3.2px;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+#container2{
+    position: relative;
+    height: 119px;
+    width: 100%;
+    top: -3.2px;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+#container3{
+    position: relative;
+    height: 119px;
+    width: 100%;
+    top: -3.2px;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+#container4{
+    position: relative;
+    height: 119px;
+    width: 100%;
+    top: -3.2px;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+#container5{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(143, 0, 0, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container6{
+   position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container7{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container8{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container9{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container10{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container11{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container12{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container13{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container14{
+   position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container15{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container16{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container17{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container18{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container19{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200px;
+}
+#container20{
+    position: relative;
+    height: 300pt;
+    width: 100%;
+    right: 50pt;
+    border-radius: 1em;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin-bottom: 200pt;
+    padding-bottom: 300pt;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+
+}
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+  padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+/*Temp Real*/
+#obj1{
+    padding-bottom: 150pt;
+}
+
+/*Temp Max*/
+#obj2{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp Min*/
+#obj3{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp AVG*/
+#obj4{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp Real*/
+#obj5{
+    padding-bottom: 150pt;
+} 
+
+/*Temp Max*/
+#obj6{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp Min*/
+#obj7{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp AVG*/
+#obj8{
+    display: none;
+    padding-bottom: 150pt;     
+} 
+
+/*Temp Real*/
+#obj9{
+    padding-bottom: 150pt;
+} 
+
+/*Temp Max*/
+#obj10{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp Min*/
+#obj11{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp AVG*/
+#obj12{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp Real*/
+#obj13{
+    padding-bottom: 150pt;
+} 
+
+/*Temp Max*/
+#obj14{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp Min*/
+#obj15{
+    display: none;
+    padding-bottom: 150pt;
+} 
+
+/*Temp AVG*/
+#obj16{
+    display: none;
+    padding-bottom: 150pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
