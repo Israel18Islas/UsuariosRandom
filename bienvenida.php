@@ -23,6 +23,7 @@
 		<!--title-->
 		<title>Random User</title>
         <!--javascript-->
+        <script src="javascript.js"></script>
         <!--stylesheets-->
         <link href="style.css" rel="stylesheet" type="text/css"/>
 		<!--metadata-->
@@ -39,21 +40,20 @@
     -->
     <!--MENU-->
     <nav class="menu">
-        <label class="options" href="">HOME</label>
+        <a class="options" href="">HOME</a>
         <a class="options" href="profile.html">PROFILE</a>
-        <label class="options" href="">LOGGIN</label>
-        <label class="options" href="">CONTACT US</label>
+        <a class="options" href="">LOGGIN</a>
+        <a class="options" href="">CONTACT US</a>
         <a class="options" href="php/cerrar_sesion.php">LOG OUT</a>
     </nav>
     <br>
      <!--RIGHT PANEL-->
      <div class="sec" id="second">
         <div id="title-fsec">
-            Recent People
+            Saved Contacts
             <table>
-                <tbody>
+                <tbody id="saved-contacts">
                     <tr>
-                        <td class="first-row">FIRST FRIEND</td>
                     </tr>
                 </tbody>
             </table>
@@ -62,11 +62,10 @@
     <!--LEFT PANEL-->
     <div class="sec" id="first">
         <div id="title-fsec">
-            Saved Contacts
+            Recent Contacts
             <table>
-                <tbody>
+                <tbody id="recent-contacts">
                     <tr>
-                        <td class="first-row">FIRST FRIEND</td>
                     </tr>
                 </tbody>
             </table>
@@ -95,7 +94,7 @@
         <!--button id="rate">Rate!</button-->
         <img id="like" src="like.png" width="80px">
         <img id="unlike" src="like.png" width="80px">
-        <button id="add">Add to my friends</button>
+        <button id="add" onclick=addUsers()>Add to my friends</button>
     </div>
     
     <!--SCRIPT-->
@@ -108,6 +107,10 @@
             var email = document.querySelector("#email");
             var city = document.querySelector("#city");
             var cell = document.querySelector("#cell");
+            var row = document.querySelector("#first-row");
+
+            var recent = document.querySelector("#second-row");
+            var tab = document.getElementById('recent-contacts');
             btn.addEventListener("click", function(){
                 fetch(url)
                 .then(parseJSON)
@@ -131,7 +134,15 @@
                     email.innerText = data.email;
                     city.innerText = data.location.city;
                     cell.innerText = data.cell;
+                    //row.innerText = data.email;
+                    var info = data.login.username;
+                    //recent.innerText += data.email;
+                    tab.innerHTML += "<tr><td id=\"first-row\">"+info+"</td></tr>";
                 }
+            /*function saveInfo(data){
+                console.log(data);
+                row.innerText = data.email;
+            } */
         </script>
     </body>
 </html>

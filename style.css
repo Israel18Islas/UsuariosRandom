@@ -17,6 +17,8 @@ body{
 }
 .options{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-decoration: none;
     background-color: inherit;
     font-size: 15px;
     width: 150px;
@@ -131,7 +133,7 @@ button {
     outline: none;
     border: 0;
 }
-
+/*
 a{
     background:rgb(192, 94, 94);
     width: 40px;
@@ -140,7 +142,7 @@ a{
     display: flex;
     margin: auto;
 }
-
+*/
 .footer:hover {
     background: #1abc9c;
     cursor: pointer;
