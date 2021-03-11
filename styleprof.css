@@ -13,6 +13,8 @@
 }
 .options{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-decoration: none;
     background-color: inherit;
     font-size: 15px;
     width: 150px;
