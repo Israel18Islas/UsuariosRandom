@@ -40,9 +40,9 @@
     -->
     <!--MENU-->
     <nav class="menu">
-        <a class="options" href="">HOME</a>
+        <a class="options" href="bienvenida.php">HOME</a>
         <a class="options" href="profile.html">PROFILE</a>
-        <a class="options" href="">LOGGIN</a>
+        <a class="options" href="">LOG IN</a>
         <a class="options" href="">CONTACT US</a>
         <a class="options" href="php/cerrar_sesion.php">LOG OUT</a>
     </nav>
