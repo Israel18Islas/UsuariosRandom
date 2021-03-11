@@ -36,7 +36,7 @@ body{
 
 .sec{
     width: 30%;
-    height: 400px;
+    height: 600px;
     align-items: center;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -195,10 +195,11 @@ a{
 }
 
 #first-row{
-    height: 30px;
+    height: 40px;
     width: 40%;
     background: #1dcaa7;
     border-radius: 10px;
+    color: white;
 }
 #like{
     float: right;
