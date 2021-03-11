@@ -92,11 +92,20 @@
     <!-- BOTTOM BUTTONS -->
     <div class="bottom">
         <!--button id="rate">Rate!</button-->
-        <img id="like" src="like.png" width="80px">
-        <img id="unlike" src="like.png" width="80px">
+        <!--img id="like" src="like.png" width="80px"-->
+        <!--img id="unlike" src="like.png" width="80px"-->
+        <div id="like" onclick=myLove()>
+            <img id="like" src="heart.png" width="80px">
+        </div>
         <button id="add" onclick=addUsers()>Add to my friends</button>
     </div>
     
+    <div class="megusta">
+        <div id="yes">
+            I Like 🔥😍
+        </div>
+    </div>
+
     <!--SCRIPT-->
         <script>
             var url = 'https://randomuser.me/api/';
@@ -107,10 +116,15 @@
             var email = document.querySelector("#email");
             var city = document.querySelector("#city");
             var cell = document.querySelector("#cell");
-            var row = document.querySelector("#first-row");
+            //var row = document.querySelector("#first-row");
 
             var recent = document.querySelector("#second-row");
             var tab = document.getElementById('recent-contacts');
+            
+            function myLove(){
+                like = document.getElementById('yes').style.display = "flex";
+            }
+
             btn.addEventListener("click", function(){
                 fetch(url)
                 .then(parseJSON)
@@ -119,7 +133,6 @@
                     console.log(err);
                 });
             });
-
             function parseJSON(res){
                 return res.json().then(function(parsedData){
                     return parsedData.results[0];
@@ -138,11 +151,8 @@
                     var info = data.login.username;
                     //recent.innerText += data.email;
                     tab.innerHTML += "<tr><td id=\"first-row\">"+info+"</td></tr>";
+                    like = document.getElementById('yes').style.display = "none";
                 }
-            /*function saveInfo(data){
-                console.log(data);
-                row.innerText = data.email;
-            } */
         </script>
     </body>
 </html>
